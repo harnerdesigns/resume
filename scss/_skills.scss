@@ -1,4 +1,6 @@
 .skills{width:100%;
+	    @include breakpoint(mobileonly) {
+flex-direction:column;    }
 
 }
 .skills_cat-title{width:100%;margin:1em 0; font-size:3em; text-align:center;}
@@ -16,9 +18,26 @@
 	svg{font-size:4em; margin:0 0.25em;}
 	img{width:4em; margin:0 0.25em;}
 
+	    @include breakpoint(mobileonly) {
+	    	flex-wrap:nowrap;
+	    	align-items:center;
+	    	width:100%;
+	    	justify-content:center;
+	    	margin:0.5em 0;
+	    	padding:0.5em;
+	    	border-bottom:1px solid #ccc;
+
+	    	svg{font-size:1.5em;}
+	    	img{width:1.5em;}
+
+    }
+
 }
 
 .skill__title{
 	width:100%;
 	text-align:center;
+
+	    @include breakpoint(mobileonly) {
+width:auto; text-align:left;   }
 }

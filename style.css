@@ -44,6 +44,9 @@ table {
 
 .skills {
   width: 100%; }
+  @media (max-width: 60em) {
+    .skills {
+      flex-direction: column; } }
 
 .skills_cat-title {
   width: 100%;
@@ -66,17 +69,63 @@ table {
   .skill img {
     width: 4em;
     margin: 0 0.25em; }
+  @media (max-width: 60em) {
+    .skill {
+      flex-wrap: nowrap;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      margin: 0.5em 0;
+      padding: 0.5em;
+      border-bottom: 1px solid #ccc; }
+      .skill svg {
+        font-size: 1.5em; }
+      .skill img {
+        width: 1.5em; } }
 
 .skill__title {
   width: 100%;
   text-align: center; }
+  @media (max-width: 60em) {
+    .skill__title {
+      width: auto;
+      text-align: left; } }
+
+.projects {
+  width: 100%;
+  margin-bottom: 0.5em; }
+  .projects .project {
+    font-size: 2em;
+    line-height: 1.4em;
+    margin: 1em 0 2em; }
+    .projects .project h2 {
+      text-align: center;
+      margin: 1em 0; }
+    .projects .project p {
+      width: 80%;
+      margin: 0 auto 0.5em; }
+      @media (max-width: 60em) {
+        .projects .project p {
+          width: 95%; } }
+    .projects .project iframe {
+      box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.6); }
+    .projects .project img {
+      max-width: 100%;
+      margin: 0 auto 0.5em;
+      display: block;
+      box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.6); }
 
 * {
   box-sizing: border-box; }
 
+html {
+  font-size: 16px; }
+  @media (max-width: 60em) {
+    html {
+      font-size: 12px; } }
+
 body {
   font-family: "Ubuntu";
-  font-size: 16px;
   line-height: 1.75em; }
 
 a {
@@ -91,7 +140,7 @@ h2 {
   font-weight: 200; }
 
 h3 {
-  margin-top: 1rem;
+  margin-top: 1em;
   font-size: 1em; }
 
 hr {
@@ -112,8 +161,15 @@ hr {
   color: #fff;
   box-shadow: 0 -5px 15px -2px rgba(0, 0, 0, 0.7);
   z-index: 2; }
-  .sidebar a:hover {
-    opacity: 0.4; }
+  @media (max-width: 60em) {
+    .sidebar {
+      position: relative;
+      width: 100vw;
+      height: auto; } }
+  .sidebar a {
+    transition: all 300ms; }
+    .sidebar a:hover {
+      opacity: 0.4; }
 
 .profile-picture {
   display: flex;
@@ -127,11 +183,17 @@ hr {
     border-radius: 100%;
     width: 100%;
     height: auto; }
+  @media (max-width: 60em) {
+    .profile-picture {
+      width: 80vw;
+      height: 80vw; } }
 
 .name {
   margin: 0.5em 0;
   font-size: 3em;
-  font-weight: 100; }
+  font-weight: 100;
+  text-align: center;
+  line-height: 1.2em; }
 
 .socials {
   margin-top: 1rem;
@@ -142,7 +204,8 @@ hr {
     font-size: 2em; }
 
 .email a,
-.portfolio a, .location a {
+.portfolio a,
+.location a {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -150,10 +213,12 @@ hr {
   transition: all 300ms; }
 
 .email svg,
-.portfolio svg, .location svg {
+.portfolio svg,
+.location svg {
   margin-right: 0.25em; }
 
-#print {
+#print,
+#email {
   width: 90%;
   font-size: 2rem;
   background: #e91e63;
@@ -162,15 +227,26 @@ hr {
   padding: 0.25em;
   cursor: pointer;
   transition: all 300ms;
-  margin: auto 0 0.5em; }
-  #print:hover {
+  margin: 0 0 0.5em; }
+  #print:hover,
+  #email:hover {
     background: #ee4c83;
     transform: scale(1.02); }
-  #print:active {
+  #print:active,
+  #email:active {
     background: #c1134e;
     transform: scale(0.98); }
-  #print svg {
+  #print svg,
+  #email svg {
     margin-right: 0.25em; }
+
+#email {
+  text-align: center;
+  opacity: 1;
+  margin: auto 0 0.5em;
+  background: none;
+  border: 3px solid #fff;
+  text-decoration: none; }
 
 .full {
   width: 76vw;
@@ -181,6 +257,11 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  @media (max-width: 60em) {
+    .full {
+      width: 100vw;
+      margin-left: 0;
+      padding: 1em; } }
   .full h1 {
     font-size: 3rem;
     text-align: center;
@@ -203,6 +284,9 @@ hr {
   font-size: 2rem;
   line-height: 1.4em;
   margin-bottom: 1em; }
+  @media (max-width: 60em) {
+    .intro {
+      width: 95%; } }
 
 .highlights {
   width: 100%; }
@@ -211,10 +295,10 @@ hr {
   width: 100%;
   font-size: 1.5rem;
   padding: 1em;
-  margin: 0.5em;
+  margin: 0.5em 0;
   box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.6); }
   .highlight .title {
-    text-align: center;
+    text-align: left;
     margin-top: 0;
     padding: 0.35em 0;
     font-size: 1.5em;
@@ -241,6 +325,9 @@ hr {
 
 #timeline {
   width: 80%; }
+  @media (max-width: 60em) {
+    #timeline {
+      width: 95%; } }
   #timeline #horizontal {
     display: none; }
   #timeline svg {

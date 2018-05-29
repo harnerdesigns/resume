@@ -1,2 +1,14 @@
 $mainColor: #3e50b3;
 $accentColor: #e91e63;
+
+
+
+@mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 70em) { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 60em)  { @content ; }
+
+  }
+}

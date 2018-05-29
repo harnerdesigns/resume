@@ -76,7 +76,7 @@ hr {
     }
 }
 
-#print{display:none;}
+#print, #email{display:none;}
 .highlights {
     display: flex;
     align-items: flex-start;
@@ -100,6 +100,8 @@ hr {
 
 .highlight__bullets{
 	margin:0;
+    padding:0;
+    display:block!important;
 }
 
 
@@ -151,6 +153,8 @@ svg{
 
 }
 
+
+.projects{display:none;}
 
 
 .ThinItalic {

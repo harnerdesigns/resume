@@ -66,7 +66,7 @@ hr {
     width: 100%;
     height: auto; }
 
-#print {
+#print, #email {
   display: none; }
 
 .highlights {
@@ -86,7 +86,9 @@ hr {
   text-align: center; }
 
 .highlight__bullets {
-  margin: 0; }
+  margin: 0;
+  padding: 0;
+  display: block !important; }
 
 .skills__container {
   display: flex;
@@ -123,6 +125,9 @@ hr {
   margin: 0 auto; }
 
 #timeline svg {
+  display: none; }
+
+.projects {
   display: none; }
 
 .ThinItalic {
