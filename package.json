@@ -1,0 +1,18 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Jack Harner's Résumé Web Page.",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.24.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp-sass": "^4.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jack Harner",
+  "license": "ISC"
+}

@@ -1,0 +1,24 @@
+.skills{width:100%;
+
+}
+.skills_cat-title{width:100%;margin:1em 0; font-size:3em; text-align:center;}
+
+
+.skill{
+	width:30%;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	flex-direction:row;
+	font-size:2em;
+	line-height: 3em;
+	flex-wrap:wrap;
+	svg{font-size:4em; margin:0 0.25em;}
+	img{width:4em; margin:0 0.25em;}
+
+}
+
+.skill__title{
+	width:100%;
+	text-align:center;
+}

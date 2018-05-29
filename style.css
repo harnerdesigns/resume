@@ -1,0 +1,269 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+
+.skills {
+  width: 100%; }
+
+.skills_cat-title {
+  width: 100%;
+  margin: 1em 0;
+  font-size: 3em;
+  text-align: center; }
+
+.skill {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 2em;
+  line-height: 3em;
+  flex-wrap: wrap; }
+  .skill svg {
+    font-size: 4em;
+    margin: 0 0.25em; }
+  .skill img {
+    width: 4em;
+    margin: 0 0.25em; }
+
+.skill__title {
+  width: 100%;
+  text-align: center; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Ubuntu";
+  font-size: 16px;
+  line-height: 1.75em; }
+
+a {
+  color: inherit; }
+
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  font-weight: 200; }
+
+h3 {
+  margin-top: 1rem;
+  font-size: 1em; }
+
+hr {
+  width: 80%;
+  margin: 1rem auto;
+  border: 1px solid rgba(255, 255, 255, 0.6); }
+
+.sidebar {
+  font-family: "Roboto";
+  width: 20vw;
+  background: #3e50b3;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  box-shadow: 0 -5px 15px -2px rgba(0, 0, 0, 0.7);
+  z-index: 2; }
+  .sidebar a:hover {
+    opacity: 0.4; }
+
+.profile-picture {
+  display: flex;
+  margin-top: 1em;
+  width: 16vw;
+  height: 16vw;
+  background: url("https://harnerdesigns.com/wp-content/uploads/2018/05/Snapchat-453121577-e1527365801252.jpg") center center/cover;
+  border-radius: 100%;
+  border: 1px solid #fff; }
+  .profile-picture .profile-picture__img {
+    border-radius: 100%;
+    width: 100%;
+    height: auto; }
+
+.name {
+  margin: 0.5em 0;
+  font-size: 3em;
+  font-weight: 100; }
+
+.socials {
+  margin-top: 1rem;
+  display: flex;
+  width: 80%;
+  justify-content: space-around; }
+  .socials svg {
+    font-size: 2em; }
+
+.email a,
+.portfolio a, .location a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms; }
+
+.email svg,
+.portfolio svg, .location svg {
+  margin-right: 0.25em; }
+
+#print {
+  width: 90%;
+  font-size: 2rem;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 0.25em;
+  cursor: pointer;
+  transition: all 300ms;
+  margin: auto 0 0.5em; }
+  #print:hover {
+    background: #ee4c83;
+    transform: scale(1.02); }
+  #print:active {
+    background: #c1134e;
+    transform: scale(0.98); }
+  #print svg {
+    margin-right: 0.25em; }
+
+.full {
+  width: 76vw;
+  margin-left: 20vw;
+  padding: 1vw 0 0 4vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .full h1 {
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    color: #e91e63;
+    line-height: 3rem; }
+    .full h1:after {
+      width: 100%;
+      height: 2px;
+      content: "";
+      background: #e91e63;
+      position: absolute;
+      bottom: -10px;
+      left: 0; }
+
+.intro {
+  width: 80%;
+  font-size: 2rem;
+  line-height: 1.4em;
+  margin-bottom: 1em; }
+
+.highlights {
+  width: 100%; }
+
+.highlight {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1em;
+  margin: 0.5em;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.6); }
+  .highlight .title {
+    text-align: center;
+    margin-top: 0;
+    padding: 0.35em 0;
+    font-size: 1.5em;
+    font-weight: bold; }
+    .highlight .title svg {
+      margin-right: 0.5em; }
+  .highlight .company {
+    font-size: 1.25em;
+    font-weight: 100;
+    font-style: italic; }
+  .highlight .highlight__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer; }
+    .highlight .highlight__header svg {
+      color: #e91e63; }
+  .highlight .highlight__bullets {
+    display: none;
+    list-style: inside; }
+    .highlight .highlight__bullets li {
+      margin-bottom: 0.5em;
+      padding-left: 0.5em; }
+
+#timeline {
+  width: 80%; }
+  #timeline #horizontal {
+    display: none; }
+  #timeline svg {
+    width: 100%;
+    height: auto; }
+    #timeline svg g {
+      transform-origin: 50% 50%;
+      transition: all 300ms;
+      cursor: default; }
+      #timeline svg g + circle {
+        transition: all 300ms; }
+      #timeline svg g:hover {
+        transform: scale(1.02); }
+        #timeline svg g:hover + circle {
+          fill: #e91e63; }
+
+.ThinItalic {
+  font-weight: 100;
+  font-style: italic; }
+
+.LightItalic {
+  font-weight: 100;
+  font-style: italic; }
+
+.Bold {
+  font-weight: bold; }

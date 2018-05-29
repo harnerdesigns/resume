@@ -1,0 +1,166 @@
+@import "vars";
+
+* {
+    color: #000;
+}
+
+body {
+    font-family: "Roboto";
+    font-size: 12px;
+}
+
+.sidebar {
+    position: relative;
+    flex-direction: row;
+    background: none;
+    border-bottom: 2px solid #000;
+    box-shadow: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    svg {
+        margin-right: 0.5em;
+    }
+
+    a{text-decoration: none;}
+}
+
+.name {
+    width: 100%;
+    font-size: 8em;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 900;
+    order:0;
+    color:$accentColor!important;
+}
+
+.socials {order:-1; width:100%; margin:0;
+    display: flex; align-items:center; justify-content:space-between;
+    li {
+        list-style: none;
+        display: flex; flex-direction:row;
+        align-items:center; justify-content:center; flex-wrap:wrap;
+        &:after {
+            content: attr(data-username);
+            margin-right:0.5em;
+        }
+    }
+}
+
+hr {
+    display: none;
+}
+
+.full {
+    width: 100%;
+    margin-left: 0;
+
+    h1 {
+        text-align: center;
+        margin-bottom:0.25em;
+    }
+}
+
+
+.profile-picture {
+    display: none;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#print{display:none;}
+.highlights {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.highlight {
+    width: 45%;
+    svg {
+        display: none;
+    }
+}
+
+.highlight__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    .title {}
+}
+
+.highlight__bullets{
+	margin:0;
+}
+
+
+.skills__container{
+	display:flex;
+	width:100%;
+	margin:0 auto;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction:column;
+
+        .skills_cat-title{
+   	width:100%;
+   	display:block;
+   text-align: center;
+
+   }
+
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    img{width:1em;margin-right: 0.5em;
+    }
+.skill__title{
+    margin:0.15em 0;
+
+}
+    svg {
+        margin-right: 0.5em;
+    }
+
+}
+
+#timeline{
+	#horizontal{display:block; width:80%; margin:0 auto;}
+svg{
+
+	display:none;
+}
+
+}
+
+
+
+.ThinItalic {
+	font-weight: 100;
+	font-style: italic;
+}
+.LightItalic {
+	font-weight: 100;
+	font-style: italic;
+}
+.Bold {
+	font-weight: bold;
+}
