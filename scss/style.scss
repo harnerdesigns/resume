@@ -14,9 +14,10 @@
     box-sizing: border-box;
 }
 
-html{font-size:16px;
+html {
+    font-size: 16px;
     @include breakpoint(mobileonly) {
-font-size:12px;
+        font-size: 12px;
     }
 }
 
@@ -44,6 +45,10 @@ h3 {
     font-size: 1em;
 }
 
+b {
+    font-weight: 900;
+}
+
 hr {
     width: 80%;
     margin: 1rem auto;
@@ -67,10 +72,13 @@ $sidebar-width:20vw;
     z-index: 2;
 
     @include breakpoint(mobileonly) {
-        position:relative; width:100vw; height:auto;
+        position: relative;
+        width: 100vw;
+        height: auto;
     }
 
-    a { transition: all 300ms;
+    a {
+        transition: all 300ms;
         &:hover {
             opacity: 0.4;
         }
@@ -90,9 +98,9 @@ $sidebar-width:20vw;
         width: 100%;
         height: auto;
     }
-        @include breakpoint(mobileonly) {
-        width:80vw;
-        height:80vw;
+    @include breakpoint(mobileonly) {
+        width: 80vw;
+        height: 80vw;
     }
 }
 
@@ -100,8 +108,8 @@ $sidebar-width:20vw;
     margin: 0.5em 0;
     font-size: 3em;
     font-weight: 100;
-    text-align:center;
-    line-height:1.2em;
+    text-align: center;
+    line-height: 1.2em;
 }
 
 .socials {
@@ -109,6 +117,10 @@ $sidebar-width:20vw;
     display: flex;
     width: 80%;
     justify-content: space-around;
+    flex-wrap: wrap;
+    li {
+        margin: 0 0.3em;
+    }
     svg {
         font-size: 2em;
     }
@@ -129,17 +141,31 @@ $sidebar-width:20vw;
     }
 }
 
+
+.buttons {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: auto;
+}
+
 #print,
-#email {
+#email,
+#download {
     width: 90%;
     font-size: 2rem;
-    background: $accentColor;
+    background: none;
     color: #fff;
     border: none;
     padding: 0.25em;
     cursor: pointer;
     transition: all 300ms;
-    margin:0 0 0.5em;
+    margin: 0 0 0.5em;
+    text-decoration: none;
+
     &:hover {
         background: lighten($accentColor, 10);
         transform: scale(1.02);
@@ -148,19 +174,37 @@ $sidebar-width:20vw;
         background: darken($accentColor, 10);
         transform: scale(0.98);
     }
+
+    &:first-of-type {
+        margin: auto 0 0.5em;
+    }
     svg {
         margin-right: 0.25em;
     }
 }
 
-#email{
-    text-align:center;
-    opacity:1;
-    margin: auto 0 0.5em;
-    background:none;
-    border:3px solid #fff;
-    text-decoration: none;}
+#email,
+#print {
+    text-align: center;
+    opacity: 1;
+    background: none;
+    border: 3px solid #fff;
+}
 
+#print {
+
+    @include breakpoint(mobileonly) {
+        display: none;
+    }
+}
+
+
+#download {
+    text-align: center;
+    border: 3px solid $accentColor;
+
+    background: $accentColor;
+}
 
 
 
@@ -182,9 +226,9 @@ $sidebar-width:20vw;
     align-items: center;
     justify-content: center;
     @include breakpoint(mobileonly) {
-        width:100vw;
-        margin-left:0;
-        padding:1em;
+        width: 100vw;
+        margin-left: 0;
+        padding: 1em;
     }
     h1 {
         font-size: 3rem;
@@ -214,7 +258,8 @@ $sidebar-width:20vw;
     margin-bottom: 1em;
 
     @include breakpoint(mobileonly) {
-        width:95%;
+        width: 95%;
+        font-size: 1.5rem;
     }
 }
 
@@ -268,7 +313,7 @@ $sidebar-width:20vw;
     width: 80%;
 
     @include breakpoint(mobileonly) {
-        width:95%;
+        width: 95%;
     }
     #horizontal {
         display: none;
