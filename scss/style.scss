@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", sans-serif;
     line-height: 1.75em;
 }
 
@@ -58,7 +58,7 @@ hr {
 $sidebar-width:20vw;
 
 .sidebar {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     width: $sidebar-width;
     background: $mainColor;
     height: 100vh;
