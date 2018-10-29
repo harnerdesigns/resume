@@ -46,7 +46,7 @@ table {
   width: 100%; }
   @media (max-width: 60em) {
     .skills {
-      flex-direction: column; } }
+      align-items: flex-end; } }
 
 .skills_cat-title {
   width: 100%;
@@ -56,12 +56,12 @@ table {
   line-height: 1em; }
 
 .skill {
-  width: 30%;
+  width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 3em;
   flex-wrap: wrap; }
   .skill svg {
@@ -72,10 +72,9 @@ table {
     margin: 0 0.25em; }
   @media (max-width: 60em) {
     .skill {
-      flex-wrap: nowrap;
       align-items: center;
-      width: 100%;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: flex-end;
       margin: 0.5em 0;
       padding: 0.5em;
       border-bottom: 1px solid #ccc; }
@@ -86,25 +85,28 @@ table {
 
 .skill__title {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  line-height: 1.5em; }
   @media (max-width: 60em) {
     .skill__title {
       width: auto;
-      text-align: left; } }
+      text-align: center; } }
 
 .projects {
   width: 100%;
   margin-bottom: 0.5em; }
   .projects .project {
-    font-size: 2em;
     line-height: 1.4em;
     margin: 1em 0 2em; }
     .projects .project h2 {
       text-align: center;
-      margin: 1em 0; }
+      margin: 1em 0;
+      font-weight: bold; }
     .projects .project p {
       width: 80%;
-      margin: 0 auto 0.5em; }
+      margin: 0 auto 0.5em;
+      line-height: 1.4em;
+      font-size: 1.5em; }
       @media (max-width: 60em) {
         .projects .project p {
           width: 95%; } }
@@ -126,7 +128,7 @@ html {
       font-size: 12px; } }
 
 body {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   line-height: 1.75em; }
 
 a {
@@ -136,9 +138,11 @@ h1 {
   font-size: 3rem; }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.65em;
   margin-top: 0.5em;
-  font-weight: 200; }
+  margin-bottom: 0.5em;
+  width: 100%;
+  text-align: center; }
 
 h3 {
   margin-top: 1em;
@@ -153,7 +157,7 @@ hr {
   border: 1px solid rgba(255, 255, 255, 0.6); }
 
 .sidebar {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   width: 20vw;
   background: #3e50b3;
   height: 100vh;
@@ -173,7 +177,7 @@ hr {
   .sidebar a {
     transition: all 300ms; }
     .sidebar a:hover {
-      opacity: 0.4; }
+      color: #e91e63; }
 
 .profile-picture {
   display: flex;
@@ -228,15 +232,19 @@ hr {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-top: auto; }
+  @media (max-width: 60em) {
+    .buttons {
+      margin-top: 0.5em; } }
 
 #print,
 #email,
 #download {
-  width: 90%;
-  font-size: 2rem;
+  width: 30%;
+  font-size: 0.8rem;
   background: none;
   color: #fff;
   border: none;
@@ -244,17 +252,19 @@ hr {
   cursor: pointer;
   transition: all 300ms;
   margin: 0 0 0.5em;
-  text-decoration: none; }
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
   #print:hover,
   #email:hover,
   #download:hover {
-    background: #ee4c83;
-    transform: scale(1.02); }
+    background: #ee4c83; }
   #print:active,
   #email:active,
   #download:active {
-    background: #c1134e;
-    transform: scale(0.98); }
+    background: #c1134e; }
   #print:first-of-type,
   #email:first-of-type,
   #download:first-of-type {
@@ -262,23 +272,45 @@ hr {
   #print svg,
   #email svg,
   #download svg {
-    margin-right: 0.25em; }
+    font-size: 2em; }
+  @media (max-width: 60em) {
+    #print,
+    #email,
+    #download {
+      font-size: 1.5em;
+      flex-direction: row; }
+      #print svg,
+      #email svg,
+      #download svg {
+        font-size: 1em;
+        margin-right: 0.25em; } }
 
 #email,
 #print {
   text-align: center;
   opacity: 1;
-  background: none;
-  border: 3px solid #fff; }
+  background: none; }
 
 @media (max-width: 60em) {
   #print {
     display: none; } }
 
-#download {
+#download,
+.button {
+  text-align: center; }
+
+.portfolio-text {
+  display: none; }
+
+.portfolio-button {
   text-align: center;
-  border: 3px solid #e91e63;
-  background: #e91e63; }
+  background: #e91e63;
+  color: #fff;
+  padding: 0.25em;
+  font-size: 2em;
+  width: 100%;
+  text-decoration: none;
+  margin: 4em 0; }
 
 .full {
   width: 76vw;

@@ -5,7 +5,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65838121-5"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
 
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
@@ -36,18 +36,16 @@
         <h3 class="location"><i class="fas fa-map-marker-alt"></i>Albuquerque, NM, USA</h3>
         <h3 class="email"><a href="mailto:jack@harnerdesigns.com"><i class="far fa-envelope"></i>jack@harnerdesigns.com</a></h3>
         <h3 class="portfolio"><a href="https://harnerdesigns.com"><i class="fas fa-desktop"></i>HarnerDesigns.com</a></h3>
-        <hr>
         <div class="buttons">
-            <a id="email" href="mailto:?subject=Check%20Out%20Jack%20Harner's%20Resume&body=Here's%20the%20link:%20https://resume.harnerdesigns.com"><i class="fas fa-envelope"></i>Email</a>
+            <h2><i class="fas fa-share-alt"></i> Share My Resume</h2>
+            <a id="email" href="mailto:?subject=Check%20Out%20Jack%20Harner's%20Resume&body=Here's%20the%20link:%20https://resume.jackharner.com"><i class="fas fa-envelope"></i>Email</a>
             <a id="print" onClick="window.print();"><i class="fas fa-print"></i>Print</a>
             <a id="download" href="/Harner_Jack_Resume.pdf" download><i class="far fa-file-pdf"></i>Download</a>
         </div>
     </section>
     <!-- END SIDEBAR -->
     <main class="full">
-        <p class="intro">Hi, I'm <b>Jack Harner</b>! I'm a web designer based out of Albuquerque, New Mexico. I specialize in developing custom web solutions. I've been working with and learning web design since about 2011. In that time I've developed an eye for good design and a love for clean code. </p>
-        <p class="intro">I'm kind of a Jack-Of-All-Trades (pun intended). I have experience working with HTML/CSS/JS, PHP/Wordpress/MySQL, Search Engine Optimization, Digital Marketing, Social Media Management, Graphic Design, Photography, and I can Juggle. </p>
-        <p class="intro">I'd love to work where my creativity and critical thinking are challanged and critiqued on a daily basis. I'd love to put my talents to work growing a business and where I can grow as a designer.</p>
+        <p class="intro">Hi, I'm <b>Jack Harner</b>! I'm a web developer and graphic designer based out of Albuquerque, New Mexico. I specialize in developing custom web solutions. I've been working with and learning web design since 2011. I love responsive, pixel perfect design and constantly iterating on ideas.</p>
         <h1>Professional Highlights</h1>
         <section class="highlights">
             <div class="highlight">
@@ -73,7 +71,7 @@
                 </ul>
             </div>
         </section>
-        <h1>Timeline</h1>
+        <h1>Employment Timeline</h1>
         <section id='timeline'>
             <img id="horizontal" src="img/timeline-horizontal.svg">
             <svg id="vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 623.701 1140.275">
@@ -192,6 +190,26 @@
                     <p class="skill__title">Adobe XD</p>
                 </div>
             </section>
+            <section class="grid skills">
+                <h2 class="skills_cat-title">Libraries & Platforms</h2>
+                <div class="skill">
+                    <i class="fab fa-fw fa-wordpress"></i>
+                    <p class="skill__title">
+                        WordPress</p>
+                </div>
+                <div class="skill">
+                    <img src="img/cakePHP.svg">
+                    <p class="skill__title">
+                        CakePHP
+                    </p>
+                </div>
+                <div class="skill">
+                    <img src="img/bigcommerce.svg">
+                    <p class="skill__title">
+                        BigCommerce
+                    </p>
+                </div>
+            </section>
         </section>
         <section class="projects">
             <h1>Projects I'm Proud Of</h1>
@@ -204,13 +222,15 @@
                 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
             </div>
             <div class="project">
-                <h2>Harner Designs Portfolio</h2>
-                <p>Harner Designs is my freelance Web Design company. I recently redid the portfolio to give it a much needed facelift.</p>
-                <p>I wanted to emphasize to my potential clients the services we offer and the level of quality we strive for. I can't sell the fact that I make great websites without having a great portfolio.</p>
-                <p>Check out the portfolio <a href="https://harnerdesigns.com/?utm_source=resume">Here</a>.</p>
-                <img src="img/harnerdesigns.com.jpg" alt="Harner Designs Portfolio" title="Harner Designs Portfolio">
+                <h2>Material Color Palette</h2>
+                <p>Material Design is a set of guidelines from Google that help create good designs that work well on different screens. Within those guidelines, they have a list of color codes that look good on screens, and work well together.</p>
+                <p>I got tired of pulling up the docs every time I needed a color, so I created a Firefox/Chrome extension that puts all of the color codes in 4 different formats (HEX, #HEX, RGB, RGBA) right at your fingertips.</p>
+                <p>Get it for <a href="https://addons.mozilla.org/en-US/firefox/addon/material-design-color-palette/">Firefox</a> or <a href="https://chrome.google.com/webstore/detail/material-color-palette-cl/daejjicekmhkbpgahnhfmpmjhojhpane">Chrome</a>, or check out the <a href="https://github.com/harnerdesigns/material-color">source code</a>.</p>
+                <img src="https://harnerdesigns.com/wp-content/uploads/2018/10/Material-color-picker.jpg" alt="Material Color Palette" title="Material Color Palette">
             </div>
         </section>
+        <a href="https://harnerdesigns.com/projects" class="button portfolio-button">View My Portfolio »</a>
+        <h1 class="portfolio-text">Portfolio Available at HarnerDesigns.com</h1>
     </main>
     <script async src="app.js"></script>
 </body>

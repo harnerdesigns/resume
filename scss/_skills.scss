@@ -1,7 +1,9 @@
 .skills {
     width: 100%;
+
     @include breakpoint(mobileonly) {
-        flex-direction: column;
+        // flex-direction: column;
+        align-items: flex-end;
     }
 }
 
@@ -15,28 +17,31 @@
 
 
 .skill {
-    width: 30%;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 3em;
     flex-wrap: wrap;
+
     svg {
         font-size: 4em;
         margin: 0 0.25em;
     }
+
     img {
         width: 4em;
         margin: 0 0.25em;
     }
 
     @include breakpoint(mobileonly) {
-        flex-wrap: nowrap;
+        // flex-wrap: nowrap;
         align-items: center;
-        width: 100%;
-        justify-content: center;
+        flex-direction: column;
+        // width: 100%;
+        justify-content: flex-end;
         margin: 0.5em 0;
         padding: 0.5em;
         border-bottom: 1px solid #ccc;
@@ -44,6 +49,7 @@
         svg {
             font-size: 1.5em;
         }
+
         img {
             width: 1.5em;
         }
@@ -53,9 +59,10 @@
 .skill__title {
     width: 100%;
     text-align: center;
+    line-height: 1.5em;
 
     @include breakpoint(mobileonly) {
         width: auto;
-        text-align: left;
+        text-align: center;
     }
 }

@@ -3,30 +3,38 @@
     margin-bottom: 0.5em;
 
     .project {
-        font-size: 2em;
+        // font-size: 2em;
         line-height: 1.4em;
         margin: 1em 0 2em;
+
         h2 {
             text-align: center;
             margin: 1em 0;
+            font-weight: bold;
         }
+
         p {
             width: 80%;
             margin: 0 auto 0.5em;
+            line-height: 1.4em;
+
+            font-size: 1.5em;
 
             @include breakpoint(mobileonly) {
-            	width:95%;
+                width: 95%;
             }
         }
-        iframe{
-    box-shadow: 0 5px 15px -5px transparentize(#000, 0.4);
+
+        iframe {
+            box-shadow: 0 5px 15px -5px transparentize(#000, 0.4);
 
         }
+
         img {
             max-width: 100%;
             margin: 0 auto 0.5em;
             display: block;
-    box-shadow: 0 5px 15px -5px transparentize(#000, 0.4);
+            box-shadow: 0 5px 15px -5px transparentize(#000, 0.4);
         }
     }
 }

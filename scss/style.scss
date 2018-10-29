@@ -16,6 +16,7 @@
 
 html {
     font-size: 16px;
+
     @include breakpoint(mobileonly) {
         font-size: 12px;
     }
@@ -35,9 +36,11 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.65em;
     margin-top: 0.5em;
-    font-weight: 200;
+    margin-bottom: 0.5em;
+    width: 100%;
+    text-align: center;
 }
 
 h3 {
@@ -79,8 +82,9 @@ $sidebar-width:20vw;
 
     a {
         transition: all 300ms;
+
         &:hover {
-            opacity: 0.4;
+            color: $accentColor;
         }
     }
 }
@@ -88,16 +92,18 @@ $sidebar-width:20vw;
 .profile-picture {
     display: flex;
     margin-top: 1em;
-    width: $sidebar-width - ( $sidebar-width / 5);
-    height: $sidebar-width - ( $sidebar-width / 5);
+    width: $sidebar-width - ($sidebar-width / 5);
+    height: $sidebar-width - ($sidebar-width / 5);
     background: url("https://harnerdesigns.com/wp-content/uploads/2018/05/Snapchat-453121577-e1527365801252.jpg") center center / cover;
     border-radius: 100%;
     border: 1px solid #fff;
+
     .profile-picture__img {
         border-radius: 100%;
         width: 100%;
         height: auto;
     }
+
     @include breakpoint(mobileonly) {
         width: 80vw;
         height: 80vw;
@@ -118,9 +124,11 @@ $sidebar-width:20vw;
     width: 80%;
     justify-content: space-around;
     flex-wrap: wrap;
+
     li {
         margin: 0 0.3em;
     }
+
     svg {
         font-size: 2em;
     }
@@ -136,6 +144,7 @@ $sidebar-width:20vw;
         justify-content: center;
         transition: all 300ms;
     }
+
     svg {
         margin-right: 0.25em;
     }
@@ -147,16 +156,23 @@ $sidebar-width:20vw;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-top: auto;
+
+    @include breakpoint(mobileonly) {
+
+        margin-top: 0.5em;
+    }
+
 }
 
 #print,
 #email,
 #download {
-    width: 90%;
-    font-size: 2rem;
+    width: 30%;
+    font-size: 0.8rem;
     background: none;
     color: #fff;
     border: none;
@@ -165,21 +181,38 @@ $sidebar-width:20vw;
     transition: all 300ms;
     margin: 0 0 0.5em;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
         background: lighten($accentColor, 10);
-        transform: scale(1.02);
     }
+
     &:active {
         background: darken($accentColor, 10);
-        transform: scale(0.98);
     }
 
     &:first-of-type {
         margin: auto 0 0.5em;
     }
+
     svg {
-        margin-right: 0.25em;
+        // margin-right: 0.25em;
+        font-size: 2em;
+    }
+
+    @include breakpoint(mobileonly) {
+
+        font-size: 1.5em;
+
+        flex-direction: row;
+
+        svg {
+            font-size: 1em;
+            margin-right: 0.25em;
+        }
     }
 }
 
@@ -188,7 +221,7 @@ $sidebar-width:20vw;
     text-align: center;
     opacity: 1;
     background: none;
-    border: 3px solid #fff;
+    // border: 3px solid #fff;
 }
 
 #print {
@@ -199,11 +232,32 @@ $sidebar-width:20vw;
 }
 
 
-#download {
+#download,
+.button {
     text-align: center;
-    border: 3px solid $accentColor;
+    // border: 3px solid $accentColor;
 
+}
+
+
+
+.portfolio-text {
+
+
+
+    display: none;
+
+}
+
+.portfolio-button {
+    text-align: center;
     background: $accentColor;
+    color: #fff;
+    padding: 0.25em;
+    font-size: 2em;
+    width: 100%;
+    text-decoration: none;
+    margin: 4em 0;
 }
 
 
@@ -225,11 +279,13 @@ $sidebar-width:20vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     @include breakpoint(mobileonly) {
         width: 100vw;
         margin-left: 0;
         padding: 1em;
     }
+
     h1 {
         font-size: 3rem;
         text-align: center;
@@ -238,6 +294,7 @@ $sidebar-width:20vw;
         margin-top: 3rem;
         color: $accentColor;
         line-height: 3rem;
+
         &:after {
             width: 100%;
             height: 2px;
@@ -281,27 +338,33 @@ $sidebar-width:20vw;
         padding: 0.35em 0;
         font-size: 1.5em;
         font-weight: bold;
+
         svg {
             margin-right: 0.5em;
         }
     }
+
     .company {
         font-size: 1.25em;
         font-weight: 100;
         font-style: italic;
     }
+
     .highlight__header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
+
         svg {
             color: $accentColor;
         }
     }
+
     .highlight__bullets {
         display: none;
         list-style: inside;
+
         li {
             margin-bottom: 0.5em;
             padding-left: 0.5em;
@@ -315,19 +378,24 @@ $sidebar-width:20vw;
     @include breakpoint(mobileonly) {
         width: 95%;
     }
+
     #horizontal {
         display: none;
     }
+
     svg {
         width: 100%;
         height: auto;
+
         g {
             transform-origin: 50% 50%;
             transition: all 300ms;
             cursor: default;
+
             &+circle {
                 transition: all 300ms;
             }
+
             &:hover {
                 transform: scale(1.02);
 
