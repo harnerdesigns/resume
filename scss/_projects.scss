@@ -2,10 +2,16 @@
     width: 100%;
     margin-bottom: 0.5em;
 
+    .grid{ justify-content: space-between; align-items:flex-start; }
+
     .project {
         // font-size: 2em;
         line-height: 1.4em;
         margin: 1em 0 2em;
+        width: 100%;
+        @include breakpoint(desktop){
+            width: 47%;
+        }
 
         h2 {
             text-align: center;
@@ -14,7 +20,7 @@
         }
 
         p {
-            width: 80%;
+            width: 100%;
             margin: 0 auto 0.5em;
             line-height: 1.4em;
 
@@ -25,16 +31,46 @@
             }
         }
 
-        iframe {
-            box-shadow: 0 5px 15px -5px transparentize(#000, 0.4);
+        .button{
 
+            width: 100%;
+            text-align:center;
+            display:block;
+            color:$accentColor;
+            border:2px solid $accentColor; 
+            border-radius: .25em;
+            text-decoration:none;
+            font-size: 1.25em;
+            padding: 0.25em;
+            margin-bottom: 0.5em;
+
+            transition:all 300ms;
+            &:hover{
+
+                color:#fff; background:$accentColor;
+            }
+        }
+
+        iframe {
+            box-shadow: $boxShadow;
+
+        }
+
+        #result-box{
+            iframe {
+
+                width: 200% !important;
+height: 200% !important;
+-webkit-transform: scale(0.5);
+transform: scale(0.5);
+            }
         }
 
         img {
             max-width: 100%;
             margin: 0 auto 0.5em;
             display: block;
-            box-shadow: 0 5px 15px -5px transparentize(#000, 0.4);
+            box-shadow: $boxShadow;
         }
     }
 }

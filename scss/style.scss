@@ -249,7 +249,7 @@ $sidebar-width:20vw;
 
 }
 
-.portfolio-button {
+.portfolio-button, .project-button {
     text-align: center;
     background: $accentColor;
     color: #fff;
@@ -294,16 +294,7 @@ $sidebar-width:20vw;
         margin-top: 3rem;
         color: $accentColor;
         line-height: 3rem;
-
-        &:after {
-            width: 100%;
-            height: 2px;
-            content: "";
-            background: $accentColor;
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-        }
+        font-weight: 900;
     }
 }
 
@@ -330,7 +321,7 @@ $sidebar-width:20vw;
     font-size: 1.5rem;
     padding: 1em;
     margin: 0.5em 0;
-    box-shadow: 0 5px 15px -5px transparentize(#000, 0.4);
+    box-shadow: $boxShadow;
 
     .title {
         text-align: left;
@@ -362,7 +353,7 @@ $sidebar-width:20vw;
     }
 
     .highlight__bullets {
-        display: none;
+        // display: none;
         list-style: inside;
 
         li {
@@ -373,37 +364,22 @@ $sidebar-width:20vw;
 }
 
 #timeline {
-    width: 80%;
+    width: 100%;
 
     @include breakpoint(mobileonly) {
         width: 95%;
     }
 
     #horizontal {
-        display: none;
+        // display: none;
+        width: 100%;
+        height: auto;
     }
 
     svg {
         width: 100%;
         height: auto;
 
-        g {
-            transform-origin: 50% 50%;
-            transition: all 300ms;
-            cursor: default;
-
-            &+circle {
-                transition: all 300ms;
-            }
-
-            &:hover {
-                transform: scale(1.02);
-
-                &+circle {
-                    fill: $accentColor;
-                }
-            }
-        }
     }
 }
 

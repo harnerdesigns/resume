@@ -1,6 +1,8 @@
 $mainColor: #3e50b3;
 $accentColor: #e91e63;
 
+$boxShadow: 0 4px 15px -5px transparentize(#000, 0.4);
+
 
 
 @mixin breakpoint($point) {
