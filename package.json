@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "Jack Harner's Résumé Web Page.",
   "main": "index.js",
-  "dependencies": {
-    "browser-sync": "^2.24.4"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.24.4",
+    "browser-sync": "^2.26.3",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-sass": "^4.0.1"
   },
