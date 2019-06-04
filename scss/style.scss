@@ -6,393 +6,389 @@
 @import "skills";
 @import "projects";
 
-
-
-
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 
-    @include breakpoint(mobileonly) {
-        font-size: 12px;
-    }
+  @include breakpoint(mobileonly) {
+    font-size: 12px;
+  }
 }
 
 body {
-    font-family: "Ubuntu", sans-serif;
-    line-height: 1.75em;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.75em;
 }
 
 a {
-    color: inherit;
+  color: inherit;
 }
 
 h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 h2 {
-    font-size: 1.65em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    width: 100%;
-    text-align: center;
+  font-size: 1.65em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  text-align: center;
 }
 
 h3 {
-    margin-top: 1em;
-    font-size: 1em;
+  margin-top: 1em;
+  font-size: 1em;
 }
 
 b {
-    font-weight: 900;
+  font-weight: 900;
 }
 
 hr {
-    width: 80%;
-    margin: 1rem auto;
-    border: 1px solid transparentize(#fff, 0.4);
+  width: 80%;
+  margin: 1rem auto;
+  border: 1px solid transparentize(#fff, 0.4);
 }
 
-$sidebar-width:20vw;
+$sidebar-width: 20vw;
 
 .sidebar {
-    font-family: "Roboto", sans-serif;
-    width: $sidebar-width;
-    background: $mainColor;
-    height: 100vh;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    color: #fff;
-    box-shadow: 0 -5px 15px -2px transparentize(#000, 0.3);
-    z-index: 2;
+  font-family: "Roboto", sans-serif;
+  width: $sidebar-width;
+  background: $mainColor;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  box-shadow: 0 -5px 15px -2px transparentize(#000, 0.3);
+  z-index: 2;
 
-    @include breakpoint(mobileonly) {
-        position: relative;
-        width: 100vw;
-        height: auto;
+  @include breakpoint(mobileonly) {
+    position: relative;
+    width: 100vw;
+    height: auto;
+  }
+
+  a {
+    transition: all 300ms;
+
+    &:hover {
+      color: $accentColor;
     }
-
-    a {
-        transition: all 300ms;
-
-        &:hover {
-            color: $accentColor;
-        }
-    }
+  }
 }
 
 .profile-picture {
-    display: flex;
-    margin-top: 1em;
-    width: $sidebar-width - ($sidebar-width / 5);
-    height: $sidebar-width - ($sidebar-width / 5);
-    background: url("https://harnerdesigns.com/wp-content/uploads/2018/05/Snapchat-453121577-e1527365801252.jpg") center center / cover;
+  display: flex;
+  margin-top: 1em;
+  width: $sidebar-width - ($sidebar-width / 5);
+  height: $sidebar-width - ($sidebar-width / 5);
+  background: url("https://harnerdesigns.com/wp-content/uploads/2018/05/Snapchat-453121577-e1527365801252.jpg") center
+    center / cover;
+  border-radius: 100%;
+  border: 1px solid #fff;
+
+  .profile-picture__img {
     border-radius: 100%;
-    border: 1px solid #fff;
+    width: 100%;
+    height: auto;
+  }
 
-    .profile-picture__img {
-        border-radius: 100%;
-        width: 100%;
-        height: auto;
-    }
-
-    @include breakpoint(mobileonly) {
-        width: 80vw;
-        height: 80vw;
-    }
+  @include breakpoint(mobileonly) {
+    width: 80vw;
+    height: 80vw;
+  }
 }
 
 .name {
-    margin: 0.5em 0;
-    font-size: 3em;
-    font-weight: 100;
-    text-align: center;
-    line-height: 1.2em;
+  margin: 0.5em 0;
+  font-size: 3em;
+  font-weight: 100;
+  text-align: center;
+  line-height: 1.2em;
 }
 
 .socials {
-    margin-top: 1rem;
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  margin-top: 1rem;
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  flex-wrap: wrap;
 
-    li {
-        margin: 0 0.3em;
-    }
+  li {
+    margin: 0 0.3em;
+  }
 
-    svg {
-        font-size: 2em;
-    }
+  svg {
+    font-size: 2em;
+  }
 }
 
 .email,
 .portfolio,
 .location {
-    a {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 300ms;
-    }
-
-    svg {
-        margin-right: 0.25em;
-    }
-}
-
-
-.buttons {
-
-    width: 100%;
+  a {
+    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: auto;
+    justify-content: center;
+    transition: all 300ms;
+  }
 
-    @include breakpoint(mobileonly) {
+  svg {
+    margin-right: 0.25em;
+  }
+}
 
-        margin-top: 0.5em;
-    }
+.buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: auto;
 
+  @include breakpoint(mobileonly) {
+    margin-top: 0.5em;
+  }
 }
 
 #print,
 #email,
 #download {
-    width: 30%;
-    font-size: 0.8rem;
-    background: none;
-    color: #fff;
-    border: none;
-    padding: 0.25em;
-    cursor: pointer;
-    transition: all 300ms;
-    margin: 0 0 0.5em;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 30%;
+  font-size: 0.8rem;
+  background: none;
+  color: #fff;
+  border: none;
+  padding: 0.25em;
+  cursor: pointer;
+  transition: all 300ms;
+  margin: 0 0 0.5em;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    &:hover {
-        background: lighten($accentColor, 10);
-    }
+  &:hover {
+    background: lighten($accentColor, 10);
+  }
 
-    &:active {
-        background: darken($accentColor, 10);
-    }
+  &:active {
+    background: darken($accentColor, 10);
+  }
 
-    &:first-of-type {
-        margin: auto 0 0.5em;
-    }
+  &:first-of-type {
+    margin: auto 0 0.5em;
+  }
+
+  svg {
+    // margin-right: 0.25em;
+    font-size: 2em;
+  }
+
+  @include breakpoint(mobileonly) {
+    font-size: 1.5em;
+
+    flex-direction: row;
 
     svg {
-        // margin-right: 0.25em;
-        font-size: 2em;
+      font-size: 1em;
+      margin-right: 0.25em;
     }
-
-    @include breakpoint(mobileonly) {
-
-        font-size: 1.5em;
-
-        flex-direction: row;
-
-        svg {
-            font-size: 1em;
-            margin-right: 0.25em;
-        }
-    }
+  }
 }
 
 #email,
 #print {
-    text-align: center;
-    opacity: 1;
-    background: none;
-    // border: 3px solid #fff;
+  text-align: center;
+  opacity: 1;
+  background: none;
+  // border: 3px solid #fff;
 }
 
 #print {
-
-    @include breakpoint(mobileonly) {
-        display: none;
-    }
+  @include breakpoint(mobileonly) {
+    display: none;
+  }
 }
-
 
 #download,
 .button {
-    text-align: center;
-    // border: 3px solid $accentColor;
-
+  text-align: center;
+  // border: 3px solid $accentColor;
 }
-
-
 
 .portfolio-text {
-
-
-
-    display: none;
-
+  display: none;
 }
 
-.portfolio-button, .project-button {
-    text-align: center;
-    background: $accentColor;
-    color: #fff;
-    padding: 0.25em;
-    font-size: 2em;
-    width: 100%;
-    text-decoration: none;
-    margin: 4em 0;
+.portfolio-button,
+.project-button {
+  text-align: center;
+  background: $accentColor;
+  color: #fff;
+  padding: 0.25em;
+  font-size: 2em;
+  width: 100%;
+  text-decoration: none;
+  margin: 2em 0;
+  border-radius: 0.25em;
+
+  @include breakpoint(mobileonly) {
+    margin: 0.5em 0;
+  }
 }
-
-
-
-
-
-
-
-
-
-
 
 .full {
-    width: 76vw;
-    margin-left: 20vw;
-    padding: 1vw 0 0 4vw;
+  width: 76vw;
+  margin-left: 20vw;
+  padding: 1vw 0 0 4vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(mobileonly) {
+    width: 100vw;
+    margin-left: 0;
+    padding: 1em;
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    @include breakpoint(mobileonly) {
-        width: 100vw;
-        margin-left: 0;
-        padding: 1em;
-    }
-
-    h1 {
-        font-size: 3rem;
-        text-align: center;
-        position: relative;
-        margin-bottom: 3rem;
-        margin-top: 3rem;
-        color: $accentColor;
-        line-height: 3rem;
-        font-weight: 900;
-    }
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    color: $accentColor;
+    line-height: 3rem;
+    font-weight: 900;
+  }
 }
-
 
 .intro {
-    width: 80%;
-    font-size: 2rem;
-    line-height: 1.4em;
-    margin-bottom: 1em;
+  width: 80%;
+  font-size: 2rem;
+  line-height: 1.4em;
+  margin-bottom: 1em;
 
-    @include breakpoint(mobileonly) {
-        width: 95%;
-        font-size: 1.5rem;
-    }
+  @include breakpoint(mobileonly) {
+    width: 95%;
+    font-size: 1.5rem;
+  }
 }
 
-
 .highlights {
-    width: 100%;
+  width: 100%;
 }
 
 .highlight {
-    width: 100%;
-    font-size: 1.5rem;
-    padding: 1em;
-    margin: 0.5em 0;
-    box-shadow: $boxShadow;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1em;
+  margin: 0.5em 0;
+  box-shadow: $boxShadow;
 
-    .title {
-        text-align: left;
-        margin-top: 0;
-        padding: 0.35em 0;
-        font-size: 1.5em;
-        font-weight: bold;
+  .title {
+    text-align: left;
+    margin-top: 0;
+    padding: 0.35em 0;
+    font-size: 1.5em;
+    font-weight: bold;
 
-        svg {
-            margin-right: 0.5em;
-        }
+    svg {
+      margin-right: 0.5em;
     }
+  }
 
-    .company {
-        font-size: 1.25em;
-        font-weight: 100;
-        font-style: italic;
+  .company {
+    font-size: 1.25em;
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  .highlight__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    svg {
+      color: $accentColor;
     }
+  }
 
-    .highlight__header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        cursor: pointer;
+  .highlight__bullets {
+    // display: none;
+    list-style: inside;
 
-        svg {
-            color: $accentColor;
-        }
+    li {
+      margin-bottom: 0.5em;
+      padding-left: 0.5em;
     }
-
-    .highlight__bullets {
-        // display: none;
-        list-style: inside;
-
-        li {
-            margin-bottom: 0.5em;
-            padding-left: 0.5em;
-        }
-    }
+  }
 }
 
 #timeline {
+  width: 100%;
+
+  @include breakpoint(mobileonly) {
+    width: 95%;
+  }
+
+  #horizontal {
+    // display: none;
     width: 100%;
+    height: auto;
+  }
 
-    @include breakpoint(mobileonly) {
-        width: 95%;
-    }
-
-    #horizontal {
-        // display: none;
-        width: 100%;
-        height: auto;
-    }
-
-    svg {
-        width: 100%;
-        height: auto;
-
-    }
+  svg {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .ThinItalic {
-    font-weight: 100;
-    font-style: italic;
+  font-weight: 100;
+  font-style: italic;
 }
 
 .LightItalic {
-    font-weight: 100;
-    font-style: italic;
+  font-weight: 100;
+  font-style: italic;
 }
 
 .Bold {
-    font-weight: bold;
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding-left: $sidebar-width;
+  padding: 1em 0 1em $sidebar-width;
+
+  @include breakpoint(mobileonly) {
+    padding: 1em;
+  }
+  .fa-heart {
+    color: rgba(244, 67, 54, 1);
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
