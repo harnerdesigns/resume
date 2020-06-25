@@ -1,1 +1,1 @@
-# [View Resume Here](https://resume.harnerdesigns.com)
+# [View Resume](https://resume.jackharner.com)
