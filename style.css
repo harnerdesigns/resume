@@ -42,20 +42,27 @@ table {
   align-items: center;
   justify-content: center; }
 
+.skills__container {
+  width: 100%; }
+
 .skills {
   width: 100%;
   box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.6);
-  padding: 1em; }
+  padding: 1em;
+  margin: 1rem auto; }
   @media (max-width: 60em) {
     .skills {
-      align-items: flex-end; } }
+      align-items: flex-end;
+      display: grid;
+      grid-template-columns: 1fr 1fr; } }
 
 .skills_cat-title {
   width: 100%;
   margin: 1em 0;
   font-size: 3em;
   text-align: center;
-  line-height: 1em; }
+  line-height: 1em;
+  grid-column: 1 / -1; }
   .skills_cat-title:first-of-type {
     margin-top: 0; }
 
@@ -102,6 +109,11 @@ table {
   .projects .grid {
     justify-content: space-between;
     align-items: flex-start; }
+  .projects .see-more {
+    font-size: 0.5em;
+    color: #000;
+    display: block;
+    line-height: 1; }
   .projects .project {
     line-height: 1.4em;
     margin: 1em 0 2em;
@@ -127,7 +139,7 @@ table {
       display: block;
       color: #e91e63;
       border: 2px solid #e91e63;
-      border-radius: .25em;
+      border-radius: 0.25em;
       text-decoration: none;
       font-size: 1.25em;
       padding: 0.25em;
@@ -230,7 +242,7 @@ hr {
 .name {
   margin: 0.5em 0;
   font-size: 3em;
-  font-weight: 100;
+  font-weight: 900;
   text-align: center;
   line-height: 1.2em; }
 
@@ -367,7 +379,7 @@ hr {
     font-size: 3rem;
     text-align: center;
     position: relative;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     margin-top: 3rem;
     color: #e91e63;
     line-height: 3rem;

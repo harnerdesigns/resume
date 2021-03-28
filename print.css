@@ -81,14 +81,14 @@ hr {
   display: none; }
 
 .highlights {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
   align-items: flex-start;
   justify-content: space-around; }
 
-.highlight {
-  width: 45%; }
-  .highlight svg {
-    display: none; }
+.highlight svg {
+  display: none; }
 
 .highlight__header {
   display: flex;
