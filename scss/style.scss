@@ -88,9 +88,9 @@ $sidebar-width: 20vw;
 .profile-picture {
   display: flex;
   margin-top: 1em;
-  width: $sidebar-width - ($sidebar-width / 5);
-  height: $sidebar-width - ($sidebar-width / 5);
-  background: url("https://pbs.twimg.com/profile_images/1400219779198160897/Q35Loppk.jpg") center
+  width: $sidebar-width - ($sidebar-width * 0.2);
+  height: $sidebar-width - ($sidebar-width * 0.2);
+  background: url("./img/Headshot.png") center
     center / cover;
   border-radius: 100%;
   border: 1px solid #fff;
